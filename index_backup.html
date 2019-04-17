@@ -1,0 +1,213 @@
+<?php
+  
+?>
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!--<link rel="stylesheet" href="http://resources/demos/style.css">-->
+
+  <style>
+    #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+
+  <title>Hello, world!</title>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+    $( function() {
+    $( "#draggable" ).draggable();
+  });
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-sm-8">
+      <p>
+        <h1>未来のかたち - ユーザーホームページ</h1>
+      </p>
+    </div>
+    <div class="col-sm-4">
+    </div>
+
+    <!--◆◆◆ ログインボタン表示-->
+    <div class="row justify-content-end">
+      <div class="col-sm-8">
+        <p>ようこそ、<span name="disp_name">ゲスト</span> 様</p>
+      </div>
+      <div class="col-sm-4" style="text-align:right">
+        <p>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@login">ログイン</button>
+          <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@new_entry">新規登録</button>
+          <!--<button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@update">更新</button>-->
+        </p>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="member-entry.php" method="post">
+                <input type="hidden" name="process" value="">
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">お名前を入力してください。</label>
+                  <input type="text" class="form-control" name="name" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">暗証番号を入力してください。（４桁の数字）</label>
+                  <input type="text" class="form-control" name="password" id="message-text">
+                </div>
+                <button type="button" class="btn btn-secondary" id="btn_cancel" data-dismiss="modal">キャンセル</button>
+                <button type="submit" class="btn btn-primary" name="entry" id="btn_entry">登録</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--◆◆◆ ナビゲーションの表示 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Hidden brand</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!--◆◆◆ モーダルの表示 -->
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--◆◆◆ フォームの表示 -->
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </form>
+  </div>
+  <div id="draggable" class="ui-widget-content">
+    <p>Drag me around</p>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- CDN にて読み込み-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="jquery-ui/jquery-ui.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!--
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+  <script>
+    $('#exampleModal').on('show.bs.modal', function(event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      if (recipient == "login"){
+        modal.find('.modal-title').text('ログイン')
+      } else {
+        modal.find('.modal-title').text('新規登録')
+      }
+      //modal.find('.modal-title').text('New message to ' + recipient)
+      modal.find('.process').val(recipient)
+    })
+  </script>
+
+</body>
+
+</html>

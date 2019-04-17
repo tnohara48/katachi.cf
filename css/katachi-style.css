@@ -1,0 +1,140 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+body {
+  font-size:85%;
+}
+
+#table-meeting {
+  width: 80%;
+  height: auto;
+  table-layout: fixed;
+  /*margin: auto;*/
+}
+#table-meeting td, #table-meeting th {
+  border: 1px #ccc solid;
+  width: auto;
+  height: auto;
+  padding:5px;
+}
+#table-meeting-hour {
+  width: auto;
+  height: auto;
+  table-layout: fixed;
+  /*margin: auto;*/
+}
+#table-meeting-hour td, #table-meeting-hour th {
+  /*margin: auto;*/
+  width: auto;
+  height: auto;
+  border: 1px #ccc solid;
+  padding:5px;
+}
+#table-meeting-confirm {
+  width: auto;
+  height: auto;
+  table-layout: fixed;
+  /*margin: auto;*/
+}
+#table-meeting-confirm td, #table-meeting-confirm th {
+  /*margin: auto;*/
+  width: auto;
+  height: auto;
+  border: 1px #ccc solid;
+  padding:5px;
+}
+
+a {
+  color: var(--orange);
+}
+a :active{
+  ccolor: var(--orange);
+
+}
+a :hover{
+  ccolor: var(--orange);
+}
+a :focus{
+  ccolor: var(--orange);
+}
+a :visited {
+  ccolor: var(--orange);
+}
+#tab-top {
+  /*border-ccolor: var(--secondary);*/
+  /*  background:  var(--secondary);*/
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  /*border-ccolor: var(--secondary);*/
+  background:  var(--white);
+}
+.ui-widget-header {
+  border-ccolor: var(--white);
+  background:  var(--white);
+}
+.nav-tabs {
+  border-ccolor: var(--white);
+  background:  var(--white);
+}
+.ui-widget-content{
+  border-ccolor: var(--white);
+  background:  var(--white);
+}
+
+body {
+  color: var(--gray-dark);
+  font-family: vdl-logomaru, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.katachi_font_color {
+  color: var(--orange);
+}
+
+.katachi_main_title {
+  color: var(--orange);
+  font-family: vdl-logomaru, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.ui-widget-header{
+  border: 0;
+  border-ccolor: var(--white);
+  background:  var(--white);
+}
+.table-hover {
+/*  font-size:75%;*/
+}
+.tab-pane {
+  font-size:100%;
+}
+table {
+  /*box-shadow: 2px 2px 4px gray;*/
+}
+
+#accordion2 {
+  /*font-size:75%;*/
+}
+.form-group input, .form-group textarea,form button, form select {
+  box-shadow: 2px 2px 4px gray;
+  margin-left:5px;
+  margin-right:5px;
+}
+.form-group input[type="checkbox"] {
+  box-shadow: 2px 2px 4px white;
+}
+img {
+  margin:5px;
+}
+.card {
+  border:0;
+}
+.div_title_small {
+  font-size: 110%;
+  font-weight: 800;
+  border-left: 6px #ccc solid;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
