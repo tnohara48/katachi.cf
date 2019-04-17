@@ -1,6 +1,5 @@
 <?php
   header('Content-type: text/plain; charset= UTF-8');
-
   require_once('./common/common.php');
 
   $dsn='mysql:dbname=membersapp;host=localhost;charset=utf8';
